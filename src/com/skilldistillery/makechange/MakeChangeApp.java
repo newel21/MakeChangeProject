@@ -16,57 +16,119 @@ public class MakeChangeApp {
 		sc.close();
 
 		if (money < itemPrice) {
-			System.out.println("That's not enough.");
+			System.out.println("Insufficient funds. Please try again");
 		} else if (money == itemPrice) {
-			System.out.println("Thank you");
+			System.out.println("Exact amount received. No change is required.");
 		}
 		
 		double change = money - itemPrice;
-		//System.out.println(change);
-		int hundred, fifty, twenty, ten, five, one, 
-		quarter, dime, nickel, penny;
+		change = Math.round(change * 100.0)/100.0;
+		if (money > itemPrice) {
+			System.out.println("Your change will be: ");
+			System.out.println(change);
+		}
+		int hundred, fifty, twenty, ten, five, one, quarter, dime, nickel, penny;
 		
 		hundred = (int)(change / 100.0);
 		change -= hundred * 100.0;
-		System.out.println("$100   :" + hundred);
+		if (hundred == 1) {
+			System.out.println(hundred + " one hundred dollar bill");
+		}else if (hundred > 1) {
+			System.out.println(hundred + " one hundred dollar bills");
+		}else if (hundred == 0) {
+			//System.out.println();
+		}
 		
 		fifty = (int)(change / 50.0);
 		change -= fifty * 50.0;
-		System.out.println("$50   :" + fifty);
+		if (fifty == 1) {
+			System.out.println(fifty + " fifty dollar bill");
+		}else if (fifty > 1) {
+			System.out.println(fifty + " fifty dollar bills");
+		}else if (fifty == 0) {
+			//System.out.println();
+		}
 		
         twenty = (int)(change / 20.0);
         change -= twenty * 20.0;
-        System.out.println("$20   :" + twenty);
+        if (twenty == 1) {
+        	System.out.println(twenty + " twenty dollar bill");
+        }else if (twenty > 1) {
+        	System.out.println(twenty + " twenty dollar bills");
+        }else if ( twenty == 0) {
+        	//System.out.println();
+        }
         
         ten = (int)(change / 10.0);
         change -= ten * 10.0;
-        System.out.println("$10   :" + ten);
+        if (ten == 1 ) {
+        	System.out.println(ten + " ten dollar bill");
+        }else if (ten > 1) {
+        	System.out.println(ten + " ten dollar bills");
+        }else if ( ten == 0) {
+        	//System.out.println();
+        }
         
         five = (int)(change / 5.0);
         change -= five * 5.0;
-        System.out.println("$5   :" + five);
+        if (five == 1) {
+        	System.out.println(five + " five dollar bill");
+        }else if (five > 1) {
+        	System.out.println(five + " five dollar bills");
+        }else if (five == 0) {
+        	//System.out.println();
+        }
            
         one = (int)(change / 1.0);
         change -= one * 1.0;
-        System.out.println("$1   :" + one);
+        if ( one == 1) {
+        	System.out.println(one + " one dollar bill");
+        }else if (one > 1) {
+        	System.out.println(one + " one dollar bills");
+        }else if ( one == 0) {
+        	//System.out.println();
+        }
         
         quarter = (int)(change / 0.25);
         change -= quarter * 0.25;
-        System.out.println("$0.25   :" + quarter);
+        if (quarter == 1) {
+        	System.out.println(quarter + " quarter");
+        }else if (quarter > 1) {
+        	System.out.println(quarter + " quarters");
+        }else if (quarter == 0) {
+        	//System.out.println();
+        }
         
         dime = (int)(change / 0.10);
         change -= dime * 0.10;
-        System.out.println("$0.10   :" + dime);
+        if (dime == 1) {
+        	System.out.println(dime + " dime");
+        }else if (dime > 1) {
+        	System.out.println(dime + " dimes");
+        }else if (dime == 0) {
+        	//System.out.println();
+        }
         
         nickel = (int)(change / 0.05);
         change -= nickel * 0.05;
-        System.out.println("$0.05   :" + nickel);
+        if (nickel == 1 ) {
+        	System.out.println(nickel + " nickel");
+        }else if (nickel > 1) {
+        	System.out.println(nickel + " nickels");    	
+        }else if (nickel == 0) {
+        	//System.out.println();
+        }
         
         penny = (int)(change / 0.01);
         change -= penny * 0.01;
-        System.out.println("$0.01   :" + penny);
-
+        if (penny == 1) {
+        	System.out.println(penny + " penny");
+        }else if (penny > 1) {
+        	System.out.println(penny + " pennies");    	
+        }else if (penny == 0) {
+        	//System.out.println();
+        }
+      
 
 	}
-
 }
