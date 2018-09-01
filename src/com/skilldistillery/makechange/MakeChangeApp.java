@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class MakeChangeApp {
 
 	public static void main(String[] args) {
-
+		
+		//#### 1 see README.md
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the price of the item: ");
 		double itemPrice = sc.nextDouble();
@@ -14,7 +15,8 @@ public class MakeChangeApp {
 		double money = sc.nextDouble();
 
 		sc.close();
-
+		
+		// #### 2 see README.md
 		if (money < itemPrice) {
 			System.out.println("Insufficient funds. Please try again");
 		} else if (money == itemPrice) {
@@ -22,11 +24,11 @@ public class MakeChangeApp {
 		}
 		
 		double change = money - itemPrice;
-		//change = Math.round(change * 10000.0)/10000.0;
 		if (money > itemPrice) {
 			System.out.println("Your change will be: ");
-			System.out.println(change);
+			//System.out.println(change);
 		}
+		
 		int hundred, fifty, twenty, ten, five, one, quarter, dime, nickel, penny;
 		
 		hundred = (int)(change / 100.0);
@@ -119,6 +121,7 @@ public class MakeChangeApp {
         	//System.out.println();
         }
         
+        change = Math.round(change * 100.0) /100.0;
         penny = (int)(change / 0.01);
         change -= penny * 0.01;
         if (penny == 1) {
