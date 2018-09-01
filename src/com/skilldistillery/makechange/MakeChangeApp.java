@@ -22,7 +22,7 @@ public class MakeChangeApp {
 		}
 		
 		double change = money - itemPrice;
-		change = Math.round(change * 100.0)/100.0;
+		//change = Math.round(change * 10000.0)/10000.0;
 		if (money > itemPrice) {
 			System.out.println("Your change will be: ");
 			System.out.println(change);
