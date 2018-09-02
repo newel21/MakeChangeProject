@@ -8,10 +8,10 @@ public class MakeChangeApp {
 		
 		//#### 1 see README.md
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter the price of the item: ");
+		System.out.print("Enter the price of the item: $");
 		double itemPrice = sc.nextDouble();
 
-		System.out.print("Enter the amount of money: ");
+		System.out.print("Enter the amount of money: $");
 		double money = sc.nextDouble();
 
 		sc.close();
@@ -23,14 +23,17 @@ public class MakeChangeApp {
 			System.out.println("Exact amount received. No change is required.");
 		}
 		
+		// #### 3 see README.md
 		double change = money - itemPrice;
 		if (money > itemPrice) {
-			System.out.println("Your change will be: ");
+			System.out.println("\nYour change will be: ");
 			//System.out.println(change);
 		}
 		
 		int hundred, fifty, twenty, ten, five, one, quarter, dime, nickel, penny;
 		
+		// #### 4 see README.md
+		change = Math.round(change * 100.0) /100.0;
 		hundred = (int)(change / 100.0);
 		change -= hundred * 100.0;
 		if (hundred == 1) {
@@ -41,6 +44,7 @@ public class MakeChangeApp {
 			//System.out.println();
 		}
 		
+		change = Math.round(change * 100.0) /100.0;
 		fifty = (int)(change / 50.0);
 		change -= fifty * 50.0;
 		if (fifty == 1) {
@@ -51,6 +55,7 @@ public class MakeChangeApp {
 			//System.out.println();
 		}
 		
+		change = Math.round(change * 100.0) /100.0;
         twenty = (int)(change / 20.0);
         change -= twenty * 20.0;
         if (twenty == 1) {
@@ -61,6 +66,7 @@ public class MakeChangeApp {
         	//System.out.println();
         }
         
+        change = Math.round(change * 100.0) /100.0;
         ten = (int)(change / 10.0);
         change -= ten * 10.0;
         if (ten == 1 ) {
@@ -71,6 +77,7 @@ public class MakeChangeApp {
         	//System.out.println();
         }
         
+        change = Math.round(change * 100.0) /100.0;
         five = (int)(change / 5.0);
         change -= five * 5.0;
         if (five == 1) {
@@ -81,6 +88,7 @@ public class MakeChangeApp {
         	//System.out.println();
         }
            
+        change = Math.round(change * 100.0) /100.0;
         one = (int)(change / 1.0);
         change -= one * 1.0;
         if ( one == 1) {
@@ -91,6 +99,7 @@ public class MakeChangeApp {
         	//System.out.println();
         }
         
+        change = Math.round(change * 100.0) /100.0;
         quarter = (int)(change / 0.25);
         change -= quarter * 0.25;
         if (quarter == 1) {
@@ -101,6 +110,7 @@ public class MakeChangeApp {
         	//System.out.println();
         }
         
+        change = Math.round(change * 100.0) /100.0;
         dime = (int)(change / 0.10);
         change -= dime * 0.10;
         if (dime == 1) {
@@ -111,6 +121,7 @@ public class MakeChangeApp {
         	//System.out.println();
         }
         
+        change = Math.round(change * 100.0) /100.0;
         nickel = (int)(change / 0.05);
         change -= nickel * 0.05;
         if (nickel == 1 ) {
@@ -131,7 +142,6 @@ public class MakeChangeApp {
         }else if (penny == 0) {
         	//System.out.println();
         }
-      
-
+ 
 	}
 }
